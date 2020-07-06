@@ -3,6 +3,39 @@ from django.db import models
 from users.models import User
 
 
+# 手順、過程
+class Process(models.Model):
+    # やりたい事
+    name = models.TextField(
+        verbose_name='名前',
+        blank=True,
+        null=True,
+    )
+
+    # 費用
+    cost = models.IntegerField(
+        verbose_name='費用',
+        blank=True,
+        null=True,
+    )
+
+    # 所要時間
+    necessary_time = models.IntegerField(
+        verbose_name='所要時間',
+        blank=True,
+        null=True,
+    )
+
+    # 作成者
+    user = models.TextField(
+        verbose_name='作成者',
+        blank=True,
+        null=True,
+    )
+    
+
+
+# とりあえず残す
 class Item(models.Model):
     """
     データ定義クラス
